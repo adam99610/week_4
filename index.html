@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Book Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Book Search</h1>
+        <form action="/handle_get.php" method="GET">
+            <section class="form-container">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter book title">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" placeholder="Enter author name">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="30"
+                        placeholder="Enter a brief description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Format:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="hardcover" name="format" value="hardcover">
+                        <label for="hardcover">Hardcover</label>
+
+                        <input type="checkbox" id="paperback" name="format" value="paperback">
+                        <label for="paperback">Paperback</label>
+
+                        <input type="checkbox" id="ebook" name="format" value="ebook">
+                        <label for="ebook">E-book</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Availability:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="available" name="availability" value="available">
+                        <label for="available">Available</label>
+
+                        <input type="radio" id="unavailable" name="availability" value="unavailable">
+                        <label for="unavailable">Not Available</label>
+                    </div>
+                </div>
+            </section>
+
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="container">
+        <h1>Advanced Book Search</h1>
+        <form action="/handle_post.php" method="POST">
+            <section class="form-container">
+
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre">
+                        <option value="">Select genre</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="biography">Biography</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="publication-year">Publication Year:</label>
+                    <input type="number" id="publication-year" name="publication-year" placeholder="YYYY" min="1900"
+                        max="2024">
+                </div>
+
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN">
+                </div>
+
+                <div class="form-group">
+                    <label for="language">Language:</label>
+                    <input type="text" id="language" name="language" placeholder="Enter language">
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label>Rating:</label>
+                    <select id="rating" name="rating">
+                        <option value="">Select rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Contact Time:</label>
+                    <input type="time" id="time" name="time">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password (for account retrieval):</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+
+            </section>
+
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>
