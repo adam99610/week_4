@@ -1,9 +1,41 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     var_dump($_POST);
     echo "<pre>";
+    function san($var){
+        return htmlspecialchars($var);
+    }
     if (isset($_POST['genre'])) {
-        echo $_POST['genre'];
+        $genre = $_POST;
+        echo san($_POST['genre']);
+
+        switch ($genre) {
+            case 'fiction':
+                echo "you have selected fiction";
+                break;
+            case 'non-fiction':
+                echo "you have selected non-fiction";
+                break;
+            case 'mystery':
+                echo "you have selected mystery";
+                break;
+            case 'fantasy':
+                echo "you have selected fantasy";
+                break;
+            case 'biography':
+                echo "you have selected biography";
+                break;
+            case 'science':
+                echo "you have selected science";
+                break;
+            case 'history':
+                echo "you have selected history";
+                break;
+
+            default:
+                echo "choice not found.";
+                break;
+        }
     }
     if (isset($_POST['publication-year'])) {
         echo $_POST['publication-year'];

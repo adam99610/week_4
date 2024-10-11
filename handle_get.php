@@ -17,6 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "</pre>";
         }
     }
+    if (isset($_GET['availability'])) {
+        echo $_GET['availability'];
+        if($_GET['availability'] == "available"){
+            echo "This is Available";
+        }else{
+            echo "This is unavailable";
+        }
+    }
+
     
 }
 var_dump($_GET);
